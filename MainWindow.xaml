@@ -17,10 +17,23 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Grid.RowSpan="2" Name="MainMenu">
+            <Button Content="Play" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30" Click="Button_Click_2"/>
+            <Button Content="Schedule" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30" Click="Button_Click_3"/>
             <Button Content="Main" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30" Click="Button_Click"/>
             <Button Content="Team" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30" Click="Button_Click_1"/>
             <Button Content="Training" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30"/>
             <Button Content="Shop" HorizontalAlignment="Center" Margin="0 5 0 0" VerticalAlignment="Center" Width="120" Height="30"/>
+        </StackPanel>
+
+
+        <StackPanel Name="EntranceWindow" Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Ваша команда :" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <Label Name="YourTeam" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Visibility="Collapsed" Name="MatchWindow" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Итоги матча:" FontSize="25"/>
+            <Label Name="MatchResult" Content="Победила команда " FontSize="25"/>
         </StackPanel>
 
         <StackPanel Name="MainMenuButtons" Visibility="Collapsed" Grid.Column="1" Grid.Row="0">
@@ -29,6 +42,11 @@
         </StackPanel>
 
         <StackPanel Name="TeamButtons" Visibility="Collapsed" Grid.Column="1" Grid.Row="0">
+            <Label Content="Это информация о команде"/>
+            <Label Content="Состав команды"/>
+        </StackPanel>
+
+        <StackPanel Name="TeamInfo" Visibility="Collapsed" Grid.Column="1" Grid.Row="0">
             <Label Content="Это информация о команде"/>
             <Label Content="Состав команды"/>
         </StackPanel>

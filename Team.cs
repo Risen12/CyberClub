@@ -20,7 +20,12 @@ namespace CyberClub
             rate = rating;
         }
 
-        
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
 
     }
 }
